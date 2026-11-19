@@ -1,0 +1,4 @@
+package com.rideshare.matchingservice.client;
+
+public class LocationServiceClient {
+}

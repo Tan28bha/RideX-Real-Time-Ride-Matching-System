@@ -1,0 +1,4 @@
+package com.rideshare.matchingservice.dto;
+
+public class NearByDriverResponse {
+}
