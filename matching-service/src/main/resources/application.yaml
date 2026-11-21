@@ -1,3 +1,41 @@
+
+
 spring:
   application:
     name: matching-service
+server:
+  port: 8084
+
+kafka:
+  bootstrap-servers: localhost:9092
+  consumer:
+    group-id: matching-service-group
+    auto-offset-reset: earliest
+    key-deserializer: org.apache.kafka.common.serialization.StringDeSerializer
+    value-deserializer: org.springframerwork.kafka.support.serializer.JsonDeSerializer
+
+#kafka producer
+
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframerwork.kafka.support.serializer.JsonSerializer
+
+#Location Service
+
+location:
+  service:
+    url: http://localhost:8082
+
+#Actuator
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - health
+          - info
+
+
+
+
