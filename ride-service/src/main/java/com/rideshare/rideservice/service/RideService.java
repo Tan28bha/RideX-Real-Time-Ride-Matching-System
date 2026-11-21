@@ -148,7 +148,7 @@ public class RideService {
                 *Math.pow(Math.sin(dLon / 2), 2);
 
         double c = 2 * Math.asin(Math.sqrt(a));
-        double dustanceKm = 6371 * c;
+        double du stanceKm = 6371 * c;
 
         //Base fare: 50Rs + 12Rs. perKm
         double fare = 50 + (dustanceKm * 12);
