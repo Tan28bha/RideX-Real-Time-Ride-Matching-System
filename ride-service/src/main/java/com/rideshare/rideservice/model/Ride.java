@@ -1,3 +1,4 @@
+
 package com.rideshare.rideservice.model;
 
 import jakarta.persistence.*;
@@ -6,7 +7,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-import org.springframework.data.annotation.Id;
 
 import java.time.LocalDateTime;
 
@@ -15,7 +15,6 @@ import java.time.LocalDateTime;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-
 public class Ride {
 
     @Id
@@ -46,12 +45,12 @@ public class Ride {
     @Column(nullable = false)
     private String dropAddress;
 
-    //Ride status - tracks the lifecycle
+    // Ride status - tracks the lifecycle
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private RideStatus status;
 
-    // Fare Details
+    // Fare details
     private double estimatedFare;
     private double actualFare;
 
